@@ -8,12 +8,21 @@ public class StreamsDemo {
         //values.forEach(i -> System.out.println(i));
         //Internal Iteration
 
-        Consumer<Integer> c=new Consumer<Integer>() {
-            @Override
-            public void accept(Integer integer) {
-                System.out.println(integer);
-            }
-        };
-        values.forEach(c);
+//        Consumer<Integer> c=new Consumer<Integer>() {
+//            @Override
+//            public void accept(Integer integer) {
+//                System.out.println(integer);
+//            }
+//        };
+//        values.forEach(c);
+
+
+
+
+        values.forEach(StreamsDemo::doubleIt);
+    }
+    public static void doubleIt(int i)
+    {
+        System.out.println(i*2);
     }
 }
